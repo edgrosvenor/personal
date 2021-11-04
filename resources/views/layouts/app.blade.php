@@ -32,12 +32,13 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://kit.fontawesome.com/4bee98728d.js" crossorigin="anonymous"></script>
 </head>
-<body class="font-sans antialiased bg-white" x-data="{show: 'code', toggle: false}">
+<body class="font-sans antialiased bg-white" x-data="setUp()" @keydown="toggleSidebar($event)">
 <header class="bg-gray-50 text-gray-400 pl-4 border-b border-gray-400 top-0 fixed w-full">
     {{ $breadcrumb ?? '<i class="fa fa-folder"></i> gros.co' }}
     <span class="hidden md:inline float-right mr-6" x-show="toggle">
         <button @mouseup="show = 'code'">
-            <i x-bind:class="show === 'code' ? 'text-green-200' : 'text-gay-400'" class="fal
+            <i x-bind:class="show === 'code' ? 'text-green-200' : 'text-gay-400'" class="fa
+            l
         fa-list-alt"></i>
         </button>
         <button @mouseup="show = 'display'">
@@ -55,11 +56,23 @@
             {{ $slot }}
         </div>
 </main>
-<nav class="lg:inline lg:w-1/4 border-t border-gray-400 top-6 right-0 hidden md:fixed">
+<nav x-show="sidebar" class="lg:inline lg:w-1/4 border-t border-gray-400 top-6 right-0 hidden md:fixed">
     <x-sidebar-navigation/>
 </nav>
 </div>
-
-
+<script>
+    function setUp() {
+        return {
+            show: 'code',
+            toggle: false,
+            sidebar: true,
+            toggleSidebar($event) {
+                if ($event.metaKey && $event.key === '1') {
+                    this.sidebar = ! this.sidebar;
+                }
+            }
+        }
+    }
+</script>
 </body>
 </html>

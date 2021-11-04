@@ -67,81 +67,9 @@
                     <i class="fa fa-folder"></i>
                     <span class="text-black">vendor</span>
                 </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-gear"></i>
-                    <span class="text-black">.editorconfig</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">.env</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">.env.example</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">.gitattributes</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">.gitignore</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">artisan</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">composer.json</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">composer.lock</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">package.json</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">package-lock.json</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">phpunit.xml</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">README.me</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">server.php</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">tailwind.config.js</span>
-                </div>
-                <div>
-                    <i class="fa fa-angle-right text-white"></i>
-                    <i class="fa fa-file"></i>
-                    <span class="text-black">webpack.mix.js</span>
-                </div>
+                @foreach ($files as $key => $file)
+                <x-sidebar-file :file="$file" :active="$file['url'] === $page"/>
+                @endforeach
             </div>
         </div>
 
