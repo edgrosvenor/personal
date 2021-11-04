@@ -35,7 +35,7 @@
 <body class="font-sans antialiased bg-white" x-data="{show: 'code', toggle: false}">
 <header class="bg-gray-50 text-gray-400 pl-4 border-b border-gray-400 top-0 fixed w-full">
     {{ $breadcrumb ?? '<i class="fa fa-folder"></i> gros.co' }}
-    <span class="float-right mr-6" x-show="toggle">
+    <span class="hidden md:inline float-right mr-6" x-show="toggle">
         <button @mouseup="show = 'code'">
             <i x-bind:class="show === 'code' ? 'text-green-200' : 'text-gay-400'" class="fal
         fa-list-alt"></i>
@@ -55,7 +55,7 @@
             {{ $slot }}
         </div>
 </main>
-<nav class="lg:inline lg:w-1/4 border-t border-gray-400 top-6 right-0 fixed">
+<nav class="lg:inline lg:w-1/4 border-t border-gray-400 top-6 right-0 hidden md:fixed">
     <x-sidebar-navigation/>
 </nav>
 </div>

@@ -31,6 +31,8 @@ class PageController
 
         $contents = app(GetFileFromGitHub::class)->execute($page);
 
+        throw_if($contents === null, NotFoundHttpException::class);
+
 
         try {
             $code = Shiki::highlight(
@@ -47,7 +49,7 @@ class PageController
 
 
         $display = Str::endsWith($page, '.md')
-            ? app(MarkdownRenderer::class)->toHtml(file_get_contents(base_path($page)))
+            ? app(MarkdownRenderer::class)->toHtml($contents)
             : '';
 
 

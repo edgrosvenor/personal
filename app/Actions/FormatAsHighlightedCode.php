@@ -18,7 +18,7 @@ class FormatAsHighlightedCode
             ->each(function($block, $i) {
 
                 return '<div class="line mt-2">
-                    <span class="inline-block w-12 text-gray-200 w-auto mr-4">' . ++$i .'</span>' .
+                    <span class="hidden md:inline-block w-12 text-gray-200 w-auto mr-4">' . ++$i .'</span>' .
                     app(SanitizeOutput::class)->execute($block->html()) .
                 '</div>';
             });

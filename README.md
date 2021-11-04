@@ -1,7 +1,7 @@
 # Welcome, Fellow Artisans
 
 My name is Ed. I'm a web developer with 20 years of experience, mostly in Perl and PHP. These days I spend most of 
-my time inside the Laravel ecosystem. This site serves as my playground and my classroom, where I experiment, break 
+my time inside the Laravel ecosystem. This site serves as my playground and my classroom where I experiment, break 
 things, and share what I discover.
 
 ### About This Site
