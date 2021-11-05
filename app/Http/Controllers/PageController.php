@@ -53,6 +53,12 @@ class PageController
             ? app(MarkdownRenderer::class)->toHtml($contents)
             : '';
 
+        foreach (json_decode(file_get_contents(base_path('config/.files'))) as $k => $v) {
+            $search = '<span style="color: #0550AE">' . $k . '</span>';
+            $replace = '<span style="color: #0550AE">' . $v . '</span>';
+            $code = str_replace($search, $replace, $code);
+        }
+
 
         return view('page', [
             'code' => app(FormatAsHighlightedCode::class)->execute($code),

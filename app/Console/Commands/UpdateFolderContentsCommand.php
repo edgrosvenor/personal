@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 class UpdateFolderContentsCommand extends Command
 {
     protected $signature = 'folders';
+    private array $files = [];
 
     public function handle()
     {
@@ -18,9 +19,11 @@ class UpdateFolderContentsCommand extends Command
 
             \File::put(base_path('config/.folders/') . $folder . '.json', json_encode($contents));
         }
+        \File::put(base_path('config/.files'), json_encode($this->files));
     }
 
-    private function dirToArray($dir) {
+    private function dirToArray($dir): array
+    {
 
         $result = [];
 
@@ -51,6 +54,13 @@ class UpdateFolderContentsCommand extends Command
                     continue;
                 }
                 $item['url'] = Str::replace('/contents/', '/', '/' . $directory . '/' . $key);
+                if (str_ends_with($key, '.php') && strlen($key) > 6 && preg_match('~^\p{Lu}~u', $key)) {
+                    $this->files[str_replace('.php', '', $key)] = '<a href="' . Str::replace('/contents/', '/', '/'
+                            . $directory .
+                            '/' .
+                            $key) . '">' . str_replace('.php', '', $key) . '</a>';
+                }
+
                 $results[$key] = $item;
             }
             else {

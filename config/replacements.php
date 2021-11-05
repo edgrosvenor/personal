@@ -5,6 +5,10 @@ use App\Actions\CreateLink;
 return [
     // Obscure my vapor id because it's none of your business.
     env('VAPOR_ID') => 'id: xxxxx',
+    'Fathom Analytics' => app(CreateLink::class)
+        ->execute('Fathom Analytics',
+            'https://usefathom.com/ref/FGFXX7',
+            'One of th easiest ways to take a bit of your life back from Google'),
     // Shameless plug for one of my little SaaS apps
     'vaporlog.co' => app(CreateLink::class)
         ->execute('VaporLog',
