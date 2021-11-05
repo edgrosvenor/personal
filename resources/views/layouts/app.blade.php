@@ -31,7 +31,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@MaybeEdward">
-    <meta name="twitter:title" content="gros.co - An Laravel experiment">
+    <meta name="twitter:title" content="gros.co - A Laravel experiment">
     <meta name="twitter:description" content="Every once in a while, every developer has a crisis that results in
     rebuilding their personal site. That's what happened here.">
     <meta name="twitter:image" content="https://user-images.githubusercontent.com/1053395/140463062-b3581d4b-fbfc-4596-a683-9b5538e31022.jpeg">
