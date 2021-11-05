@@ -34,7 +34,7 @@
     <meta name="twitter:title" content="gros.co - An Laravel experiment">
     <meta name="twitter:description" content="Every once in a while, every developer has a crisis that results in
     rebuilding their personal site. That's what happened here.">
-    <meta name="twitter:image" content="https://user-images.githubusercontent.com/1053395/140458912-d85c4448-5a13-4a6e-b981-01df4725b3e0.jpeg">
+    <meta name="twitter:image" content="https://user-images.githubusercontent.com/1053395/140463062-b3581d4b-fbfc-4596-a683-9b5538e31022.jpeg">
     @livewireStyles
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

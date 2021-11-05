@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Actions\FormatAsHighlightedCode;
-use App\Actions\GetFileFromGitHub;
+use App\Actions\GetFile;
 use App\Actions\SanitizeOutput;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -29,7 +29,7 @@ class PageController
             $page = 'README.md';
         }
 
-        $contents = app(GetFileFromGitHub::class)->execute($page);
+        $contents = app(GetFile::class)->execute($page);
 
         throw_if($contents === null, NotFoundHttpException::class);
 

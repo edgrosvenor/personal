@@ -6,10 +6,9 @@ and share what I discover.
 
 ### About This Site
 
-I'm currently running [Laravel 8](https://laravel.com) on [Vapor](https://vapor.laravel.com). For no good reason, of
-course. This is a simple site right now with no database. Just a cache and some files sitting on GitHub. Anyway, feel
-free to read my vapor.yml file to see my setup. I make extensive use of TailwindCSS, AlpineJS, and Livewire as well as
-packages from Spatie and Ryan Chandler.
+I'm currently running [Laravel 8](https://laravel.com)
+using [Octane on a Forge Deployed Server](https://blog.laravel.com/forge-octane-support). I'm experimenting with 
+serving it on Vapor with Octane I've had limited success so far. I'll update this if / when I make the change.
 
 The sidebar at the right works like it would in your editor. It pulls the files from GitHub, caches them, and displays
 them here. Markdown files can be toggled between the rendered HTML and the markdown. The sidebar can be hidden with the
