@@ -1,23 +1,16 @@
 <?php
 
-use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| One Lonely Route
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+| I will eventually build some features here that require more traditional
+| routing, but at the moment this entire website relies on a single
+| fallback route.
 */
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-
-Route::fallback(\App\Http\Controllers\PageController::class);
+Route::fallback(PageController::class);

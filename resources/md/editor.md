@@ -11,7 +11,7 @@ autocomplete for things like model methods. This is great for people like me who
 `updateOrCreate` or `createOrUpdate`.
 
 If you can afford it or are eligible for a free license, [Laravel IDEA](https://laravel-idea.com) fills in the rest of
-the gaps in your IDE's knowledge of the framework. Between this and teh IDE Helper Generator, it's a very rare day when
+the gaps in your IDE's knowledge of the framework. Between this and the IDE Helper Generator, it's a very rare day when
 I leave a <span data-tooltip="tooltip" style="text-decoration-line:
 underline; text-decoration-style: wavy; text-decoration-color:#ddd;">squiggly line</span> under a single line of code.
 

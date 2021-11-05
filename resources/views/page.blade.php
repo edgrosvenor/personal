@@ -6,8 +6,8 @@
         </div>
     </div>
     <x-slot name="breadcrumb">
-        <i class="fa fa-folder"></i>
-        gros.co {{ $breadcrumb }}
+        <a href="/"><i class="fa fa-folder"></i>
+        gros.co </a>{{ $breadcrumb }}
     </x-slot>
     @if ($display !== '')
         <span x-init="toggle = true"></span>

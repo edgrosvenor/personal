@@ -28,6 +28,14 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@MaybeEdward">
+    <meta name="twitter:title" content="gros.co - An Laravel experiment">
+    <meta name="twitter:description" content="Every once in a while, every developer has a crisis that results in
+    rebuilding their personal site. That's what happened here.">
+    <meta name="twitter:image" content="https://user-images.githubusercontent.com/1053395/140458912-d85c4448-5a13-4a6e-b981-01df4725b3e0.jpeg">
+    @livewireStyles
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://kit.fontawesome.com/4bee98728d.js" crossorigin="anonymous"></script>
@@ -56,7 +64,8 @@
             {{ $slot }}
         </div>
 </main>
-<nav x-show="sidebar" class="lg:inline lg:w-1/4 border-t border-gray-400 top-6 right-0 hidden md:fixed">
+<nav x-show="sidebar" class="lg:inline lg:w-1/4 border-t border-gray-400 top-6 right-0 hidden md:fixed
+overflow-scroll">
     <x-sidebar-navigation/>
 </nav>
 </div>
@@ -74,5 +83,6 @@
         }
     }
 </script>
+@livewireScripts
 </body>
 </html>

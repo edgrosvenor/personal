@@ -18,7 +18,7 @@ class SidebarNavigation extends Component
     {
         $this->page = ltrim(request()?->getRequestUri(), '/');
 
-        $this->folders = [];
+        $this->folders = config('folders');
         $this->files = config('files');
 
         ksort($this->files);
