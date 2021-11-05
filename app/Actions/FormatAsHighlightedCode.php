@@ -2,7 +2,6 @@
 
 namespace App\Actions;
 
-use Illuminate\Support\Str;
 use Symfony\Component\DomCrawler\Crawler;
 
 class FormatAsHighlightedCode
@@ -11,8 +10,6 @@ class FormatAsHighlightedCode
     {
 
         $crawler = new Crawler($contents);
-
-        $i = 0;
 
         $results = $crawler->filter('.line')
             ->each(function($block, $i) {

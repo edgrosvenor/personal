@@ -18,7 +18,7 @@
             font-family: 'Fira Code', monospace;
         }
 
-        div.line:hover {
+        .line:hover {
             background-color: #efe;
         }
 
