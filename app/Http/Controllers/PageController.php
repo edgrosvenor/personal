@@ -33,20 +33,23 @@ class PageController
 
         throw_if($contents === null, NotFoundHttpException::class);
 
-
-        try {
-            $code = Shiki::highlight(
-                code: $contents,
-                language: last(explode('.', $page)),
-                theme: 'github-light',
-            );
-        } catch(Throwable $exception) {
-            dump($exception->getMessage());
-            $code = '';
-            foreach (explode("\n", $contents) as $line) {
-                $code .= '<div class="line">' . $line . '</div>' . "\n";
+        $code = \Cache::remember(md5($page), 600, function() use ($contents, $page) {
+            try {
+                $code = Shiki::highlight(
+                    code: $contents,
+                    language: last(explode('.', $page)),
+                    theme: 'github-light',
+                );
+            } catch(Throwable $exception) {
+                $code = '';
+                foreach (explode("\n", $contents) as $line) {
+                    $code .= '<div class="line">' . $line . '</div>' . "\n";
+                }
             }
-        }
+            return $code;
+        });
+
+
 
 
         $display = Str::endsWith($page, '.md')
