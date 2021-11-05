@@ -41,6 +41,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://kit.fontawesome.com/4bee98728d.js" crossorigin="anonymous"></script>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="XRKFHOZX" defer></script>
+    <!-- / Fathom -->
 </head>
 <body class="font-sans antialiased bg-white" x-data="setUp()" @keydown="toggleSidebar($event)">
 <header class="bg-gray-50 text-gray-400 pl-4 border-b border-gray-400 top-0 fixed w-full">
