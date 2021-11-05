@@ -41,6 +41,7 @@ class PageController
                 theme: 'github-light',
             );
         } catch(Throwable $exception) {
+            dump($exception->getMessage());
             $code = '';
             foreach (explode("\n", $contents) as $line) {
                 $code .= '<div class="line">' . $line . '</div>' . "\n";
