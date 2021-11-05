@@ -5,9 +5,6 @@ environments:
         domain: gros.co
         database: vaporlog
         cache: gros-co
-        octane: true
-        octane-database-session-persist: true
-        octane-database-session-ttl: 10
         memory: 1024
         cli-memory: 512
         runtime: 'php-8.0:al2'
