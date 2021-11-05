@@ -49,7 +49,7 @@ class PageController
             return $code;
         });
 
-
+dd($code);
 
 
         $display = Str::endsWith($page, '.md')
