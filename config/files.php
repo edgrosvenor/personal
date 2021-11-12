@@ -20,4 +20,9 @@ return [
         'name' => 'composer.json',
         'url' => '/composer.json',
     ],
+    '.bookmarks' => [
+        'name' => '.bookmarks',
+        'url' => '/resources/md/bookmarks.md',
+        'tooltip' => 'The sites and services I reach for most during my work day'
+    ],
 ];
