@@ -16,5 +16,4 @@ I leave a <span data-tooltip="tooltip" style="text-decoration-line:
 underline; text-decoration-style: wavy; text-decoration-color:#ddd;">squiggly line</span> under a single line of code.
 
 As for aesthetics, I keep all the windows except the main editor hidden. I do frequently use the project files 
-sidebar (as shown to the right), but keep it closed most of the time and open it up with ⌘1 when I need it. Fun side 
-note... ⌘1 will toggle the navigation sidebar on the right of this site.
+sidebar (as shown to the right), but keep it closed most of the time.
